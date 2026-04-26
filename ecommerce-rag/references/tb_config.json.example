@@ -1,0 +1,19 @@
+{
+  "_comment": "淘宝联盟 API 配置",
+  "_note": "请访问 https://pub.alimama.com/ 申请账号并创建应用",
+  
+  "app_key": "YOUR_APP_KEY",
+  "app_secret": "YOUR_APP_SECRET",
+  "adzone_id": "YOUR_ADZONE_ID",
+  
+  "_api_limits": {
+    "calls_per_day": "根据应用等级不同",
+    "calls_per_second": "通常 10-100 次/秒"
+  },
+  
+  "_required_permissions": [
+    "taobao.tbk.dg.material.optional - 商品搜索",
+    "taobao.tbk.item.info.get - 商品详情",
+    "taobao.tbk.coupon.get - 优惠券查询"
+  ]
+}

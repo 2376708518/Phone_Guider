@@ -1,0 +1,153 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "电商商品数据模型",
+  "description": "用于 RAG 库的商品信息数据结构定义",
+  
+  "definitions": {
+    "product": {
+      "type": "object",
+      "required": ["product_id", "name", "platform", "price"],
+      "properties": {
+        "product_id": {
+          "type": "string",
+          "description": "商品唯一标识符",
+          "pattern": "^prod_[a-zA-Z0-9]{8}$"
+        },
+        "name": {
+          "type": "string",
+          "description": "商品名称",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "description": {
+          "type": "string",
+          "description": "商品描述/卖点",
+          "maxLength": 2000
+        },
+        "category": {
+          "type": "string",
+          "description": "商品分类",
+          "enum": ["数码", "服饰", "家居", "食品", "美妆", "母婴", "图书", "运动", "其他"]
+        },
+        "platform": {
+          "type": "string",
+          "description": "销售平台",
+          "enum": ["淘宝", "京东", "拼多多", "抖音", "快手", "小红书", "其他"]
+        },
+        "price": {
+          "type": "number",
+          "description": "当前价格",
+          "minimum": 0
+        },
+        "original_price": {
+          "type": "number",
+          "description": "原价（用于计算折扣）",
+          "minimum": 0
+        },
+        "currency": {
+          "type": "string",
+          "description": "货币单位",
+          "default": "CNY",
+          "enum": ["CNY", "USD", "EUR", "JPY"]
+        },
+        "image_url": {
+          "type": "string",
+          "description": "商品主图 URL",
+          "format": "uri"
+        },
+        "product_url": {
+          "type": "string",
+          "description": "商品购买链接",
+          "format": "uri"
+        },
+        "affiliate_url": {
+          "type": "string",
+          "description": "推广链接（带佣金）",
+          "format": "uri"
+        },
+        "sales": {
+          "type": "integer",
+          "description": "销量",
+          "minimum": 0
+        },
+        "rating": {
+          "type": "number",
+          "description": "用户评分",
+          "minimum": 0,
+          "maximum": 5
+        },
+        "tags": {
+          "type": "array",
+          "description": "商品标签",
+          "items": {
+            "type": "string"
+          }
+        },
+        "brand": {
+          "type": "string",
+          "description": "品牌名称"
+        },
+        "specs": {
+          "type": "string",
+          "description": "规格参数（JSON 字符串或纯文本）"
+        },
+        "embedding": {
+          "type": "string",
+          "description": "向量嵌入（用于语义搜索，JSON 数组字符串）"
+        },
+        "created_time": {
+          "type": "string",
+          "description": "入库时间",
+          "format": "date-time"
+        },
+        "updated_time": {
+          "type": "string",
+          "description": "更新时间",
+          "format": "date-time"
+        },
+        "last_checked": {
+          "type": "string",
+          "description": "最后价格检查时间",
+          "format": "date-time"
+        },
+        "status": {
+          "type": "string",
+          "description": "商品状态",
+          "enum": ["在售", "下架", "缺货", "预售"],
+          "default": "在售"
+        }
+      }
+    },
+
+    "price_record": {
+      "type": "object",
+      "required": ["price", "recorded_at"],
+      "properties": {
+        "price": {
+          "type": "number",
+          "description": "当时价格",
+          "minimum": 0
+        },
+        "recorded_at": {
+          "type": "string",
+          "description": "记录时间",
+          "format": "date-time"
+        },
+        "platform": {
+          "type": "string",
+          "description": "平台"
+        }
+      }
+    }
+  },
+
+  "type": "object",
+  "properties": {
+    "products": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/product"
+      }
+    }
+  }
+}

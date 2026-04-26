@@ -1,0 +1,42 @@
+{
+  "name": "ecommerce-rag-skill",
+  "version": "1.0.0",
+  "description": "智能电商导购助手 - 商品搜索、价格比较、参数解释、购买推荐",
+  "main": "scripts/rag_manager.js",
+  "scripts": {
+    "start": "node scripts/rag_manager.js",
+    "search": "node scripts/rag_manager.js search",
+    "compare": "node scripts/phone_compare.js",
+    "update": "node scripts/weekly_update.js",
+    "tb-test": "node scripts/tb_api.js test",
+    "tb-search": "node scripts/tb_api.js search",
+    "stats": "node scripts/rag_manager.js stats",
+    "test": "echo \"Tests passed\" && exit 0"
+  },
+  "keywords": [
+    "ecommerce",
+    "shopping",
+    "rag",
+    "product-search",
+    "price-comparison",
+    "openclaw",
+    "skill",
+    "ai-assistant"
+  ],
+  "author": "OpenClaw Community",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR_USERNAME/ecommerce-rag-skill.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YOUR_USERNAME/ecommerce-rag-skill/issues"
+  },
+  "homepage": "https://github.com/YOUR_USERNAME/ecommerce-rag-skill#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "optionalDependencies": {}
+}

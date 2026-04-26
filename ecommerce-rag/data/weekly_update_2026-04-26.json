@@ -1,0 +1,88 @@
+{
+  "timestamp": "2026-04-26T13:21:41.651Z",
+  "priceUpdates": [],
+  "newProducts": [
+    {
+      "name": "小米 15S Pro 12GB+256GB",
+      "price": 5499,
+      "brand": "小米"
+    },
+    {
+      "name": "vivo X200s 12GB+256GB",
+      "price": 4299,
+      "brand": "vivo"
+    }
+  ],
+  "discontinued": [],
+  "stats": {
+    "total": 68,
+    "byBrand": {
+      "Apple": 8,
+      "小米": 11,
+      "优衣库": 1,
+      "三只松鼠": 1,
+      "戴森": 1,
+      "华为": 8,
+      "OPPO": 6,
+      "vivo": 9,
+      "荣耀": 6,
+      "三星": 5,
+      "一加": 4,
+      "iQOO": 5,
+      "realme": 3
+    },
+    "byPriceRange": {
+      "0-3000": 9,
+      "3000-5000": 27,
+      "5000-7000": 23,
+      "7000+": 9
+    },
+    "byStatus": {
+      "在售": 66,
+      "预售": 2
+    },
+    "avgPrice": 5194,
+    "newest": [
+      {
+        "name": "小米 14 Ultra 5G 手机 16GB+512GB",
+        "price": 6499
+      },
+      {
+        "name": "小米 15S Pro 12GB+256GB",
+        "price": 5499
+      },
+      {
+        "name": "vivo X200s 12GB+256GB",
+        "price": 4299
+      }
+    ],
+    "cheapest": [
+      {
+        "name": "三只松鼠 每日坚果 30 袋装",
+        "price": 69
+      },
+      {
+        "name": "优衣库 男装 纯棉 T 恤 短袖",
+        "price": 79
+      },
+      {
+        "name": "Apple AirPods Pro 2 无线蓝牙耳机",
+        "price": 1899
+      }
+    ],
+    "expensive": [
+      {
+        "name": "Apple iPhone 16 Pro Max 256GB",
+        "price": 9999
+      },
+      {
+        "name": "三星 Galaxy S25 Ultra 12GB+512GB",
+        "price": 9999
+      },
+      {
+        "name": "华为 Mate 70 Pro+ 16GB+512GB",
+        "price": 8999
+      }
+    ]
+  }
+}

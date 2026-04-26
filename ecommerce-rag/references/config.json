@@ -1,0 +1,31 @@
+{
+  "_comment": "电商商品 RAG 库配置文件",
+  
+  "rag": {
+    "type": "local",
+    "data_file": "./references/products.json",
+    "max_items": 10000,
+    "enable_embedding": false,
+    "embedding_model": ""
+  },
+
+  "feishu_bitable": {
+    "enabled": false,
+    "app_token": "",
+    "table_id": "",
+    "price_history_table_id": ""
+  },
+
+  "auto_sync": {
+    "enabled": false,
+    "interval_hours": 24,
+    "platforms": ["淘宝", "京东", "拼多多"]
+  },
+
+  "search": {
+    "default_limit": 20,
+    "max_limit": 100,
+    "enable_fuzzy": true,
+    "enable_semantic": false
+  }
+}
